@@ -4,6 +4,7 @@
 use e_ownership_references::inspect;
 use e_ownership_references::change;
 use e_ownership_references::eat;
+use e_ownership_references::bedazzle;
 
 fn main() {
     // This fancy stuff either gets the first argument as a String, or prints
@@ -52,10 +53,5 @@ fn main() {
     println!("This material is just `{}`.", material);
     bedazzle(&mut material);
     println!("Wow! Now the material is `{}`!", material);
-
-    fn bedazzle(material: &mut String) {
-        // (*material).insert_str(0, "sparkly "); // dereferences, adds 'sparkly' to the begging on the string
-        *material = String::from("sparkly");        // dereferences, replaces the string w/ the word 'sparkly'
-    }
 
 } // end of main()
