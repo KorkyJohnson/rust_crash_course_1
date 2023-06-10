@@ -20,9 +20,13 @@ fn main() {
         // - If arg is "double", then call the double() function
         // - If arg is anything else, then call the count() function, passing "arg" to it.
 
-        if arg == "sum" {sum();}
-            else if arg == "double" {double();}
-            else {count(arg);}
+        if arg == "sum" {
+            sum();
+        } else if arg == "double" {
+            double();
+        } else {
+            count(arg);
+        }
 
 
         // 1b. Now try passing "sum", "double" and "bananas" to the program by adding your argument
@@ -50,7 +54,7 @@ fn double() {
     // with `cargo run double`  Hint: The answer is 9 times.
 
     while x <= 500 {
-        x = x*2;
+        x*=2;
         count += 1;
     }
 
